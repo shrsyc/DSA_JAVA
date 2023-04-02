@@ -37,6 +37,21 @@ public class addNode {
     }
 
 
+    public void addMiddle(int index , int data){
+        Node newnode = new Node(data);
+        Node temp=head;
+        int i=0;
+        while(i<index-1){
+            temp=temp.next;
+            i++;
+        }
+
+        newnode.next=temp.next;
+        temp.next=newnode;
+
+    }
+
+
     public void printLL(){
         if(head==null){
             System.out.println("Linked List is empty");
@@ -56,6 +71,8 @@ public class addNode {
         a.addFirst(1);
         a.addFirst(2);
         a.addLast(0);
+        a.addFirst(3);
+        a.addMiddle(2, 8);
         a.printLL();
     }
     
