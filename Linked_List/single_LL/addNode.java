@@ -65,6 +65,15 @@ public class addNode {
         System.out.println("null");
     }
 
+    public static  void delMiddle(int index){
+        Node curr=head;
+        int i=0;
+        while(i<index-1){
+            curr=curr.next;
+            i++;
+        }
+        curr.next=curr.next.next;
+    }
 
     public static void main(String[] args) {
         //addNode a = new addNode();
@@ -73,6 +82,7 @@ public class addNode {
         addLast(0);
         addFirst(3);
         addMiddle(2, 8);
+        delMiddle(2);
         printLL();
     }
     
